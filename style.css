@@ -1,0 +1,77 @@
+/* NAVIGATION BAR - FLEXBOX */
+nav {
+    background-color: #333; /* dark background */
+}
+
+nav ul {
+    display: flex; /* turns the list into a flex container */
+    justify-content: center; /* centers the items horizontally */
+    align-items: center; /* centers items vertically */
+    list-style: none; /* removes default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px; /* horizontal spacing between items */
+    color: white;
+    cursor: pointer;
+}/* MAIN LAYOUT - GRID */
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* left sidebar : content : right sidebar */
+    gap: 20px; /* space between columns */
+    padding: 20px;
+}
+
+/* Optional: style the sidebars and content for visibility */
+.sidebar-left, .sidebar-right {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.content {
+    background-color: #e0e0ff;
+    padding: 10px;
+}/* RESPONSIVE DESIGN - MEDIA QUERIES */
+
+/* For screens 768px wide or smaller (tablet) */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* stack everything vertically */
+    }
+
+    nav ul {
+        flex-direction: column; /* stack nav items vertically */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* vertical spacing for nav items */
+    }
+}
+
+/* For screens 480px wide or smaller (mobile) */
+@media (max-width: 480px) {
+    header, footer {
+        text-align: center; /* center header/footer text */
+    }
+
+    main {
+        padding: 10px;
+        gap: 10px; /* smaller gap on small screens */
+    }
+}/* HEADER */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
